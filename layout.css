@@ -1,0 +1,102 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.2rem;
+    list-style: none;
+    font-family: Arial;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    background-color: rgba(12, 14, 12, 0.933);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+}
+.menu li {
+    margin: 10px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.flex > div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+/*Grid Layout */
+
+body {
+    margin-bottom: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    padding:  10px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.grid > div:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.grid > div.Anúncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    display: block;
+}
+
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .grid > div:nth-child(n + 4) {
+        display: block;
+    }
+
+    .grid > div.Anúncio {
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+
+}
+}
